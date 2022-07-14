@@ -20,8 +20,18 @@ public class LinkedList {
             last = newlink;
         }else{
 
-            last.next = newlink; // newLink becomes the last element of the element
+            last.next = newlink; // new node will be added after the last
             last = newlink;
+        }
+    }
+
+    public void display(){
+        Link current = first;
+        if (first == null)
+            System.out.println("keine Elemente");
+        while (current!= null){
+            System.out.println(current.iData);
+            current= current.next;
         }
     }
 }
